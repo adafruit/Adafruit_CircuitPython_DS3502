@@ -1,6 +1,6 @@
 from time import sleep
-import adafruit_ds3502
 import board
+import adafruit_ds3502
 from analogio import AnalogIn
 
 i2c = board.I2C()
