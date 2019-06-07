@@ -1,15 +1,22 @@
 from time import sleep
 import board
 import adafruit_ds3502
-from analogio import AnalogIn
 
 i2c = board.I2C()
 ds3502 = adafruit_ds3502.DS3502(i2c)
-wiper_output = AnalogIn(board.A0)
 
-ds3502.wiper = 127
-print("Wiper value: %d"%wiper_output.value)
-sleep(1.0)
 
-ds3502.wiper = 0
-print("Wiper value: %d"%wiper_output.value)
+#   Steps to test `set_default`:
+
+#   1. Run the program once to see what the current default value is
+#   2. Uncomment the call to `setWiperDefault` below and run it again.
+#   3. Once the program has run with the `set_default` call,
+#       comment out the line below again, then powercycle the DS3502 
+#       by removing then reattaching VCC
+#   4. Then run the program again with the line commented out to see the 
+#       new default wiper value
+
+# ds3502.set_default(99)
+
+
+print("Default wiper value: %d"%ds3502.wiper)
