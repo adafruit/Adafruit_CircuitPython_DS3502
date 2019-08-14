@@ -23,7 +23,7 @@
 `adafruit_ds3502`
 ================================================================================
 
-CircuitPython library for the Maxim DS3502 I2C Potentionmeter
+CircuitPython library for the Maxim DS3502 I2C Digital Potentionmeter
 
 
 * Author(s): Bryan Siepert
@@ -33,7 +33,7 @@ Implementation Notes
 
 **Hardware:**
 
-* `Adafruit DS3502 <https://www.adafruit.com/products>`_
+* `Adafruit DS3502 <https://www.adafruit.com/product/4286>`_
 
 **Software and Dependencies:**
 
@@ -63,9 +63,9 @@ _REG_WIPER        = const(0x00) # Wiper value register (R/W)
 _REG_CONTROL      = const(0x02) # Configuration Register (R/W)
 
 class DS3502:
-    """Driver for the DS3502 I2C Potentiometer.
+    """Driver for the DS3502 I2C Digital Potentiometer.
 
-        :param ~busio.I2C i2c_bus: The I2C bus the INA260 is connected to.
+        :param ~busio.I2C i2c_bus: The I2C bus the DS3502 is connected to.
         :param address: The I2C device address for the sensor. Default is ``0x40``.
     """
 

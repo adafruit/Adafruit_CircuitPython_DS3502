@@ -28,7 +28,7 @@ Table of Contents
     :caption: Related Products
 
 
-    * `Adafruit DS3502 <https://www.adafruit.com/products>`_
+    * `Adafruit DS3502 <https://www.adafruit.com/product/4286>`_
 
 .. toctree::
     :caption: Other Links

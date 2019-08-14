@@ -18,7 +18,7 @@ while True:
     voltage = wiper_output.value
     voltage *= 3.3
     voltage /= 65535
-    print("Wiper voltage: %.2f"%voltage)
+    print("Wiper voltage: %.2f V"%voltage)
     print("")
     sleep(1.0)
 
@@ -27,7 +27,7 @@ while True:
     voltage = wiper_output.value
     voltage *= 3.3
     voltage /= 65535
-    print("Wiper voltage: %.2f"%voltage)
+    print("Wiper voltage: %.2f V"%voltage)
     print("")
     sleep(1.0)
 
@@ -36,7 +36,7 @@ while True:
     voltage = wiper_output.value
     voltage *= 3.3
     voltage /= 65535
-    print("Wiper voltage: %.2f"%voltage)
+    print("Wiper voltage: %.2f V"%voltage)
     print("")
     sleep(1.0)
     
