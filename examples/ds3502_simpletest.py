@@ -1,7 +1,7 @@
 from time import sleep
 import board
-import adafruit_ds3502
 from analogio import AnalogIn
+import adafruit_ds3502
 
 ####### NOTE ################
 # this example will not work with Blinka/rasberry Pi due to the lack of analog pins.
@@ -39,4 +39,3 @@ while True:
     print("Wiper voltage: %.2f V"%voltage)
     print("")
     sleep(1.0)
-    
