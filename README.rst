@@ -9,8 +9,8 @@ Introduction
     :target: https://discord.gg/nBQh6qu
     :alt: Discord
 
-.. image:: https://travis-ci.com/adafruit/Adafruit_CircuitPython_DS3502.svg?branch=master
-    :target: https://travis-ci.com/adafruit/Adafruit_CircuitPython_DS3502
+.. image:: https://github.com/adafruit/Adafruit_CircuitPython_DS3502/workflows/Build%20CI/badge.svg
+    :target: https://github.com/adafruit/Adafruit_CircuitPython_DS3502/actions/
     :alt: Build Status
 
 CircuitPython library for the Maxim DS3502 I2C Potentionmeter
