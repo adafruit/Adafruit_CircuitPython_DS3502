@@ -52,15 +52,16 @@ __version__ = "0.0.0-auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_DS3502.git"
 
 
-
 from time import sleep
 from micropython import const
 from adafruit_register.i2c_struct import UnaryStruct
 from adafruit_register.i2c_bit import RWBit
 import adafruit_bus_device.i2c_device as i2cdevice
+
 # pylint: disable=bad-whitespace
-_REG_WIPER        = const(0x00) # Wiper value register (R/W)
-_REG_CONTROL      = const(0x02) # Configuration Register (R/W)
+_REG_WIPER = const(0x00)  # Wiper value register (R/W)
+_REG_CONTROL = const(0x02)  # Configuration Register (R/W)
+
 
 class DS3502:
     """Driver for the DS3502 I2C Digital Potentiometer.
@@ -72,12 +73,11 @@ class DS3502:
     def __init__(self, i2c_bus, address=0x28):
         self.i2c_device = i2cdevice.I2CDevice(i2c_bus, address)
 
-
         # set to mode 1 on init to not write to the IVR every time you set
         self._write_only_to_wiper = True
 
     _wiper = UnaryStruct(_REG_WIPER, ">B")
-    _write_only_to_wiper =  RWBit(_REG_CONTROL, 7)
+    _write_only_to_wiper = RWBit(_REG_CONTROL, 7)
 
     @property
     def wiper(self):
@@ -89,7 +89,7 @@ class DS3502:
 
     @wiper.setter
     def wiper(self, value):
-        if value < 0 or value >127:
+        if value < 0 or value > 127:
             raise ValueError("wiper must be from 0-127")
         self._wiper = value
 
@@ -100,5 +100,5 @@ class DS3502:
         """
         self._write_only_to_wiper = False
         self.wiper = default
-        sleep(0.1) # wait for write to eeprom to finish
+        sleep(0.1)  # wait for write to eeprom to finish
         self._write_only_to_wiper = True
