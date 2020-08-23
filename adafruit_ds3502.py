@@ -58,7 +58,6 @@ from adafruit_register.i2c_struct import UnaryStruct
 from adafruit_register.i2c_bit import RWBit
 import adafruit_bus_device.i2c_device as i2cdevice
 
-# pylint: disable=bad-whitespace
 _REG_WIPER = const(0x00)  # Wiper value register (R/W)
 _REG_CONTROL = const(0x02)  # Configuration Register (R/W)
 
