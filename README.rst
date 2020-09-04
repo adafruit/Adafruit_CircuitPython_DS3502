@@ -13,7 +13,7 @@ Introduction
     :target: https://github.com/adafruit/Adafruit_CircuitPython_DS3502/actions/
     :alt: Build Status
 
-CircuitPython library for the Maxim DS3502 I2C Potentionmeter
+CircuitPython library for the Maxim DS3502 I2C Potentiometer
 
 
 Dependencies
