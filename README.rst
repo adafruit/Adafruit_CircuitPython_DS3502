@@ -81,7 +81,7 @@ Usage Example
         print("Wiper voltage: %.2f"%voltage)
         print("")
         sleep(1.0)
-        
+
         ds3502.wiper = 0
         print("Wiper set to %d"%ds3502.wiper)
         voltage = wiper_output.value

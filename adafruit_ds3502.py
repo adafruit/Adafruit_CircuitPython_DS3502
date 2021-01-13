@@ -1,24 +1,7 @@
-# The MIT License (MIT)
+# SPDX-FileCopyrightText: 2019 Bryan Siepert for Adafruit Industries
 #
-# Copyright (c) 2019 Bryan Siepert for Adafruit Industries
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
+# SPDX-License-Identifier: MIT
+
 """
 `adafruit_ds3502`
 ================================================================================
@@ -65,8 +48,8 @@ _REG_CONTROL = const(0x02)  # Configuration Register (R/W)
 class DS3502:
     """Driver for the DS3502 I2C Digital Potentiometer.
 
-        :param ~busio.I2C i2c_bus: The I2C bus the DS3502 is connected to.
-        :param address: The I2C device address for the sensor. Default is ``0x40``.
+    :param ~busio.I2C i2c_bus: The I2C bus the DS3502 is connected to.
+    :param address: The I2C device address for the sensor. Default is ``0x40``.
     """
 
     def __init__(self, i2c_bus, address=0x28):
@@ -82,7 +65,7 @@ class DS3502:
     def wiper(self):
         """The value of the potentionmeter's wiper.
 
-            :param wiper_value: The value from 0-127 to set the wiper to.
+        :param wiper_value: The value from 0-127 to set the wiper to.
         """
         return self._wiper
 
@@ -95,7 +78,7 @@ class DS3502:
     def set_default(self, default):
         """Sets the wiper's default value and current value to the given value
 
-            :param new_default: The value from 0-127 to set as the wiper's default.
+        :param new_default: The value from 0-127 to set as the wiper's default.
         """
         self._write_only_to_wiper = False
         self.wiper = default
