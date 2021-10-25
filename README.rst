@@ -101,6 +101,11 @@ Usage Example
         sleep(1.0)
 
 
+Documentation
+=============
+
+API documentation for this library can be found on `Read the Docs <https://circuitpython.readthedocs.io/projects/ds3502/en/latest/>`_.
+
 Contributing
 ============
 
