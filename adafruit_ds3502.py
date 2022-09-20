@@ -41,6 +41,12 @@ from adafruit_register.i2c_struct import UnaryStruct
 from adafruit_register.i2c_bit import RWBit
 import adafruit_bus_device.i2c_device as i2cdevice
 
+try:
+    import typing  # pylint: disable=unused-import
+    from busio import I2C
+except ImportError:
+    pass
+
 _REG_WIPER = const(0x00)  # Wiper value register (R/W)
 _REG_CONTROL = const(0x02)  # Configuration Register (R/W)
 
@@ -52,7 +58,7 @@ class DS3502:
     :param address: The I2C device address for the sensor. Default is ``0x40``.
     """
 
-    def __init__(self, i2c_bus, address=0x28):
+    def __init__(self, i2c_bus: I2C, address: int = 0x28) -> None:
         self.i2c_device = i2cdevice.I2CDevice(i2c_bus, address)
 
         # set to mode 1 on init to not write to the IVR every time you set
@@ -62,7 +68,7 @@ class DS3502:
     _write_only_to_wiper = RWBit(_REG_CONTROL, 7)
 
     @property
-    def wiper(self):
+    def wiper(self) -> int:
         """The value of the potentionmeter's wiper.
 
         :param wiper_value: The value from 0-127 to set the wiper to.
@@ -70,12 +76,12 @@ class DS3502:
         return self._wiper
 
     @wiper.setter
-    def wiper(self, value):
+    def wiper(self, value: int) -> None:
         if value < 0 or value > 127:
             raise ValueError("wiper must be from 0-127")
         self._wiper = value
 
-    def set_default(self, default):
+    def set_default(self, default: int) -> None:
         """Sets the wiper's default value and current value to the given value
 
         :param new_default: The value from 0-127 to set as the wiper's default.
