@@ -10,7 +10,8 @@ import adafruit_ds3502
 # this example will not work with Blinka/rasberry Pi due to the lack of analog pins.
 # Blinka and Raspberry Pi users should run the "ds3502_blinka_simpletest.py" example
 
-i2c = board.I2C()
+i2c = board.I2C()  # uses board.SCL and board.SDA
+# i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
 ds3502 = adafruit_ds3502.DS3502(i2c)
 wiper_output = AnalogIn(board.A0)
 
