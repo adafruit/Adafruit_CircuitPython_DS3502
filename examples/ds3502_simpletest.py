@@ -16,7 +16,6 @@ ds3502 = adafruit_ds3502.DS3502(i2c)
 wiper_output = AnalogIn(board.A0)
 
 while True:
-
     ds3502.wiper = 127
     print("Wiper set to %d" % ds3502.wiper)
     voltage = wiper_output.value
