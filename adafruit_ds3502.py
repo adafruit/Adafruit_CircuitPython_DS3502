@@ -36,13 +36,15 @@ __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_DS3502.git"
 
 
 from time import sleep
-from micropython import const
-from adafruit_register.i2c_struct import UnaryStruct
-from adafruit_register.i2c_bit import RWBit
+
 import adafruit_bus_device.i2c_device as i2cdevice
+from adafruit_register.i2c_bit import RWBit
+from adafruit_register.i2c_struct import UnaryStruct
+from micropython import const
 
 try:
-    import typing  # pylint: disable=unused-import
+    import typing
+
     from busio import I2C
 except ImportError:
     pass

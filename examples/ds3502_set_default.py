@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 import board
+
 import adafruit_ds3502
 
 i2c = board.I2C()  # uses board.SCL and board.SDA

@@ -2,8 +2,10 @@
 # SPDX-License-Identifier: MIT
 
 from time import sleep
+
 import board
 from analogio import AnalogIn
+
 import adafruit_ds3502
 
 ####### NOTE ################
