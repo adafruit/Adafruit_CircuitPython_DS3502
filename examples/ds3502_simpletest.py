@@ -19,28 +19,28 @@ wiper_output = AnalogIn(board.A0)
 
 while True:
     ds3502.wiper = 127
-    print("Wiper set to %d" % ds3502.wiper)
+    print(f"Wiper set to {ds3502.wiper:d}")
     voltage = wiper_output.value
     voltage *= 3.3
     voltage /= 65535
-    print("Wiper voltage: %.2f V" % voltage)
+    print(f"Wiper voltage: {voltage:.2f} V")
     print("")
     sleep(1.0)
 
     ds3502.wiper = 0
-    print("Wiper set to %d" % ds3502.wiper)
+    print(f"Wiper set to {ds3502.wiper:d}")
     voltage = wiper_output.value
     voltage *= 3.3
     voltage /= 65535
-    print("Wiper voltage: %.2f V" % voltage)
+    print(f"Wiper voltage: {voltage:.2f} V")
     print("")
     sleep(1.0)
 
     ds3502.wiper = 63
-    print("Wiper set to %d" % ds3502.wiper)
+    print(f"Wiper set to {ds3502.wiper:d}")
     voltage = wiper_output.value
     voltage *= 3.3
     voltage /= 65535
-    print("Wiper voltage: %.2f V" % voltage)
+    print(f"Wiper voltage: {voltage:.2f} V")
     print("")
     sleep(1.0)

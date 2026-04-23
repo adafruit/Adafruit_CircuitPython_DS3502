@@ -23,4 +23,4 @@ ds3502 = adafruit_ds3502.DS3502(i2c)
 # ds3502.set_default(99)
 
 
-print("Default wiper value: %d" % ds3502.wiper)
+print(f"Default wiper value: {ds3502.wiper:d}")
